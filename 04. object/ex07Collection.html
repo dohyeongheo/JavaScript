@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="pTag">P태그</p>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+    <script>
+        // 1. 아이디 값
+        // 아이디는 고유한 값 -> HTMLElement
+        let pTag = document.getElementById('pTag');
+        console.log(pTag.innerText)
+
+        // 2. 태그이름
+        // tagName, ClassName, Name 속성 여러개 존재 가능
+        // HTMLCollection 객체로 리턴 (유사배열)
+        let lis = document.getElementsByTagName('li')
+
+        for (let i = 0; i < lis.length; i++) {
+            console.log(lis[i].innerText)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- ** jQuery import -->
+    <!-- $ is undefined 오류 : jQuery import 안되어있을 때 발생하는 오류 -->
+
+    <!-- 1. 파일을 다운로드 받아서 사용하는 방법 -->
+    <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
+
+    <!-- 2. CDN을 이용해서 사용 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+    <h1 id="h1Tag">jQuery 활용하기</h1>
+    <p>제이쿼리가 적용되지 않은 상태입니다. </p>
+
+    <!-- 1. h1 태그를 가지고 오려면? => get 역할
+let h1tag = $('h1').html();
+
+2. h1 태그에 접근하려면 => set 역할
+$('h1').html('<h2>h2로 변경</h2>')
+
+    <script>
+        // 만약에 브라우저가 jQuery를 사용할 준비가 됐다면, 문구 변경
+        // $(document).ready(
+        //     function() {
+        //         $('p').text('제이쿼리가 적용된 상태입니다.')
+        //         $('p').css('color', 'red')
+        //     }
+        // )
+        $(function() {
+
+            // .text = .innerText
+            $('p').text('제이쿼리가 적용된 상태입니다.')
+
+            // .html = .innerHTML
+            $('#h1Tag').html('<h2>h2 태그</h2>');
+
+            // .css = .style
+            $('#h1Tag').css('color', 'salmon');
+
+
+        })
+    </script>
+
+</body>
+
+</html>

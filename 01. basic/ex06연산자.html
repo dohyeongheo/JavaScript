@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = 302;
+        console.log(num / 100);
+        console.log(num % 100);
+
+        console.log('백의 자리 이하 버린 결과 >> ')
+
+        // 1. 나누기 연산자 이용
+        let num2 = 312;
+        let res = num2 - (num2 % 100)
+        console.log(res);
+
+        // 2. 형변환
+        let res2 = parseInt(num2 / 100) * 100;
+        console.log(res2);
+
+        // 형변환 실습
+        let num3 = '100';
+        let num4 = 200;
+
+        let res3 = parseInt(num3) + num4;
+        console.log('100과 200의 더한 결과 >>', res3);
+    </script>
+</body>
+
+</html>

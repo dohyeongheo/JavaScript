@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 배열 함수
+        let list = [];
+
+        // 1. push() 배열의 맨 마지막 인데스에 데이터 넣기
+        list.push(3);
+        console.log('현재 list>> ' + list);
+        list.push('박병관');
+        console.log('현재 list>> ' + list);
+
+        // 2. pop() 배열의 맨 마지막 인덱스 데이터 삭제하기
+        list.pop();
+        console.log('현재 list>> ' + list);
+
+        // 3. unshift() 배열의 맨 앞 인덱스에 데이터 넣기
+        list.unshift('선영표');
+        console.log('현재 list>> ' + list);
+
+        // 4. shift() 배열의 맨 앞 인덱스 데이터 삭제하기
+        list.shift();
+        console.log('현재 list>> ' + list);
+
+        // 5. splice() 배열의 기존 요소 삭제 / 교체 / 추가
+        // splice(시작순서, 제거개수, 넣을값)
+        let spList = [0, 1, 2, 3];
+
+        // 두번째 인덱스에 숫자 5를 추가한다.
+        spList.splice(2, 0, 5);
+        console.log('추가 splist >> ' + spList)
+
+        // 첫번째 인덱스에 2개를 제거한다.
+        spList.splice(1, 2);
+        console.log('제거 splist >> ' + spList)
+
+        // 첫번째 인덱스 1개 제거하고, 숫자 5로 추가
+        spList.splice(1, 1, 5);
+        console.log('제거,추가 splist >> ' + spList)
+    </script>
+</body>
+
+</html>

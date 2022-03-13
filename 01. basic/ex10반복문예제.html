@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 시작할 숫자, 마지막 숫자를 입력받는다
+        let num1 = Number(prompt('시작할 숫자를 입력하세요'))
+        let num2 = Number(prompt('마지막 숫자를 입력하세요'))
+
+
+        // 2. 시작 숫자 ~ 마지막 숫자까지의 합
+        // 자바스크립트는 변수 선언시 초기값을 지정해주는 게 좋다 (ex 0, "")
+        let total = 0;
+
+
+        for (let i = num1; i <= num2; i++) {
+            total += i
+        }
+
+        console.log(num1 + '부터 ' + num2 + '까지의 합 >>' + total)
+        console.log(total)
+    </script>
+</body>
+
+</html>

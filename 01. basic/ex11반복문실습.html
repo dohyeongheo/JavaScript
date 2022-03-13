@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Math.random() 0부터 1사이의 랜덤값, *100을 통해서 정수
+        // Math.floor 반올림
+        // +1을 함으로써 1~100까지
+        let ranNum = Math.floor(Math.random() * 100) + 1;
+
+
+        while (true) {
+            let number = Number(prompt('숫자를 입력해주세요'))
+            if (number > ranNum) {
+                alert('입력한 숫자보다 작은 수 입니다')
+            } else if (number < ranNum) {
+                alert('입력한 숫자보다 큰 수 입니다')
+            } else if (number == ranNum) {
+                alert('정답입니다 축하합니다')
+                break
+            } else {
+                alert('잘못 입력하셨습니다.')
+            }
+        }
+    </script>
+
+</body>
+
+</html>

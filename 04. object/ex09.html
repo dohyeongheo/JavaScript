@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <span>
+        
+        <img src="http://www.lamb.international/news/photo/201904/176_79_2716.jpg" id="img1">
+    </span>
+    <br>
+    <button onclick="change()"> 이 버튼 클릭 </button>
+
+
+    <script>
+        function change() {
+            let img1 = document.getElementById('img1')
+                // alert(img1.src)
+            if (img1.src == 'http://www.lamb.international/news/photo/201904/176_79_2716.jpg') {
+                img1.src = 'https://static.coupangcdn.com/image/vendor_inventory/images/2019/03/18/13/0/c344a97d-5e98-4c72-8879-81b6785ef4e3.jpg'
+            } else if (img1.src == 'https://static.coupangcdn.com/image/vendor_inventory/images/2019/03/18/13/0/c344a97d-5e98-4c72-8879-81b6785ef4e3.jpg') {
+                img1.src = 'http://www.lamb.international/news/photo/201904/176_79_2716.jpg'
+            }
+
+            // img1.setAttribute('src', 'https://static.coupangcdn.com/image/vendor_inventory/images/2019/03/18/13/0/c344a97d-5e98-4c72-8879-81b6785ef4e3.jpg')
+        }
+    </script>
+
+</body>
+
+</html>

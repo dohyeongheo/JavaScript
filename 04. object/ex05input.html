@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button onclick="data()">클릭</button>
+
+    <script>
+        function data() {
+            // .value : input 태그 안의 value값을 저장하거나, 가져올 때 사용
+            let txt = document.getElementById('txt').value;
+            console.log(txt);
+        }
+    </script>
+</body>
+
+</html>

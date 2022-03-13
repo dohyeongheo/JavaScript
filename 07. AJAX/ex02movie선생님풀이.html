@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="pp"></div>
+    <button onclick="aa()">요청</button>
+    <script>
+        function aa() {
+            $.ajax({
+                url: 'https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=f92e4be33f7eedd3d0f252a441775f9b&targetDt=20220301',
+                type: 'get',
+                success: function(res) {
+                    // for (let i = 0; i<res.boxOfficeResult.weeklyBoxOfficeList.length;i++){
+                    //     console.log(res.boxOfficeResult.weeklyBoxOfficeList[i].movieNm)
+                    // }
+
+                    let str = '<table>'
+                        // 첫번째 줄 
+                    str += '<tr><th>순위</th><th>영화제목</th><th>개봉일자</th></tr>'
+
+                    // 반복되는 줄 
+                    for (let i = 0; i < res.boxOfficeResult.weeklyBoxOfficeList.length; i++) {
+                        str += '<tr>'
+                        let weeklyMovie = res.boxOfficeResult.weeklyBoxOfficeList[i];
+                        // 순위 res.boxOfficeResult.weeklyBoxOfficeList[i].rank
+                        // 영화제목 res.boxOfficeResult.weeklyBoxOfficeList[i].movieNm
+                        // 개봉일자 res.boxOfficeResult.weeklyBoxOfficeList[i].openDt
+
+                        str += '<td>' + weeklyMovie.rank + '</td>'
+                        str += '<td>' + weeklyMovie.movieNm + '</td>'
+                        str += '<td>' + weeklyMovie.openDt + '</td>'
+
+
+                        str += '</tr>'
+
+                    }
+
+                    str += '</table>'
+
+                    $('#pp').html(str)
+
+                },
+                error: function() {
+                    alert('ERROR!')
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

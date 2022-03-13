@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../05. jQuery/JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="pp"></div>
+    <button onclick="aa()">요청</button>
+    <script>
+        // API를 사용하는 방법!
+        function aa() {
+            $.ajax({
+                url: 'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=f708c53b97016084db9796109a0437e8&targetDt=20220301',
+                type: 'get',
+                // 데이터는 생략 
+                // api에서 받아온 정보가 res로 넘어오게 함
+                success: function(res) {
+                    // for (let i = 0; i < res.boxOfficeResult.weeklyBoxOfficeList.length; i++) {
+                    //    console.log(res.boxOfficeResult.weeklyBoxOfficeList[i].movieNm)
+                    let str = '<table><tr> <th>순위</th> <th>영화제목</th> <th>개봉일자</th></tr>'
+                    for (let i = 0; i < res.boxOfficeResult.weeklyBoxOfficeList.length; i++) {
+                        str += '<tr><td>' + res.boxOfficeResult.weeklyBoxOfficeList[i].rank + '</td><td>' + res.boxOfficeResult.weeklyBoxOfficeList[i].movieNm + '</td><td>' + res.boxOfficeResult.weeklyBoxOfficeList[i].openDt + '</td></tr>'
+                    }
+                    str += '</table>'
+                    $('#pp').html(str)
+                },
+                error: function() {
+                    alert('ERROR!')
+                }
+
+            })
+        }
+    </script>
+</body>
+
+</html>

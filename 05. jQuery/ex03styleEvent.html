@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>마우스를 올리셨군요?!!🐭</h1>
+    <script>
+        // 스타일 단일등록
+        $('h1').css('background-color', 'red')
+
+        // jQuery 스타일을 다중 등록 하는 법
+        $('h1').css({
+            'background-color': 'black',
+            'color': 'white',
+            'font-size': '50px'
+
+        })
+
+        // jQuery 다중 이벤트 처리 on 메소드() -> 동적기능이므로 문서준비해줘야함
+        $(function() {
+            $('h1').on({
+                click: function() {
+                    $(this).css({
+                        'background-color': 'pink',
+                        'color': 'brown'
+                    })
+                },
+                mouseenter: function() {
+                    $(this).css({
+                        'background-color': 'whitesmoke',
+                        'color': 'black'
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

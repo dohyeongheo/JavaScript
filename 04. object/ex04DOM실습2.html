@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span id="span1">0</span>
+    <br>
+    <button onclick="plus()">+1증가</button>
+    <button onclick="minus()">-1감소</button>
+    <button onclick="reset()">초기화</button>
+
+    <script>
+        // 1. 수정해야하는 span태그 요소 가지고와주기 => span 변수 
+        let span = document.getElementById('span1')
+
+        // 2. 가지고 온 데이터 타입 확인 후 형변환 
+
+
+        // 3. function plus() => 계속해서 1씩 증가 
+        function plus() {
+            // 태그가 들어가는 개념이 아니기때문에 .innerText, .innerHTML 모두 사용 가능
+            let spanNum = Number(span.innerHTML)
+            span.innerHTML = spanNum + 1;
+        }
+
+        // 4. function minus() => 계속해서 1씩 감소 (단, 0일때는 감소하지x)
+        function minus() {
+            let spanNum = Number(span.innerHTML)
+            if (spanNum > 0) {
+                span.innerHTML = spanNum - 1;
+            }
+        }
+
+        // 5. function reset() => 무조건 0!
+        function reset() {
+            span.innerHTML = 0;
+        }
+    </script>
+
+</body>
+
+</html>

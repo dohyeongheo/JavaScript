@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="text">Hello, World!</p>
+    <button onclick="innerFunc()">Click!</button>
+
+    <script>
+        function innerFunc() {
+            let str = document.getElementById('text')
+            console.log(str)
+
+            // 요소 안에 '내용만' 가지고 올 때 .innerText`
+            console.log(str.innerText)
+
+            // 요소 안에 내용을 수정하고 싶을 때 
+            str.innerText = '텍스트 수정!'
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="bodyTag">
+
+    <script>
+        // 1. 사용자에게 원하는 색상을 입력받음 (빨강, 파랑, 초록)
+        let choice = prompt("원하는 색깔을 입력하세요");
+
+        // 2. 입력받은 색상에 따라 각각 배경색 설정
+
+        if (choice == 'red') {
+            document.getElementById('bodyTag').style.background = 'red';
+        } else if (choice == 'blue') {
+            document.getElementById('bodyTag').style.background = 'blue';
+        } else if (choice == 'green') {
+            document.getElementById('bodyTag').style.background = 'green';
+        } else {
+            alert('잘못 입력하셨습니다.');
+        }
+
+        // 3. 사용자가 잘 못 입력했을 경우, '잘못 입력하셨습니다.'  팝업창으로 출력
+    </script>
+
+</body>
+
+</html>

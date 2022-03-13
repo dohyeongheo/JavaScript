@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1">저를 변경해주세요!</h1>
+    <button onclick="ch()">변경!</button>
+
+    <br><br>
+    <!-- 카카오톡 붙여넣기 -->
+
+    <span id="span1">아래 버튼을 클릭하면 이 텍스트의 색깔과 크기가 변해요!</span>
+    <br>
+    <button onclick="ch2()">이 버튼 클릭!!</button>
+
+
+    <script>
+        function ch() {
+            // documnet.getElementById('h1').style.color = 'red'
+            let h1 = document.getElementById('h1')
+            h1.style.color = 'red'
+        }
+
+        function ch2() {
+            let span1 = document.getElementById('span1')
+            span1.style.color = 'tomato'
+            span1.style.fontSize = '25px'
+            span1.style.fontWeight = 'bold'
+            span1.style.backgroundColor = 'green'
+        }
+    </script>
+</body>
+
+</html>

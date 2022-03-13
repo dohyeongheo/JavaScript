@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>입력한 값을 h1태그로 출력해보기</h1>
+    <input type="text" id="txt"> <button onclick="data()">h1태그 출력</button>
+    <div id="div1"></div>
+
+    <script>
+        function data() {
+            // 1. input태그 내에 있는 value 값
+            let txt = document.getElementById('txt').value;
+
+            // 2. div안에 세팅
+            document.getElementById('div1').innerHTML = '<h1>' + txt + '</h1>'
+
+            // div1.innerHTML =
+            //     document.write = '<h1>' + txt + '</h1>'
+
+        }
+    </script>
+</body>
+
+</html>

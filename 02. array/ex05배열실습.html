@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td {
+            border: 1px solid;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        // 1. 사용자에게 과목 수를 입력받음 
+        let num = Number(prompt('과목수를 입력하세요'));
+
+        let subjectList = [];
+        let subjectScore = [];
+
+        // 2. 1에서 입력받은 수 만큼 과목 이름을 입력받는다
+        for (let i = 0; i <= num - 1; i++) {
+            subjectList[i] = prompt('과목이름을 입력하세요')
+        }
+
+        // 3. 해당 과목의 점수를 입력받고, 총점, 평균을 구한다
+        for (let i = 0; i < subjectList.length; i++) {
+            subjectScore[i] = prompt(subjectList[i] + '의 점수를 입력해주세요')
+        }
+
+        let sum = 0;
+        let avg = 0;
+
+        for (let i = 0; i < subjectScore.length; i++) {
+            sum += parseInt(subjectScore[i])
+        }
+
+        avg = Math.floor(sum / subjectList.length)
+
+
+        // 4. HTML문서 내에 테이블을 만들어서 출력
+        // -> 2줄,
+        document.write('<table>')
+        document.write('<tr>')
+        for (let i = 0; i <
+            subjectList.length; i++) {
+            document.write('<td>' + subjectList[i] + '</td>')
+        }
+        document.write('<td> 총합 </td> <td> 평균 </td>')
+        document.write('</tr>')
+
+        document.write('<tr>')
+        for (let i = 0; i < subjectScore.length; i++) {
+            document.write('<td>' + subjectScore[i] + '</td>')
+        }
+        document.write('<td>' + sum + '</td>')
+        document.write('<td>' + avg + '</td>')
+        document.write('</tr>')
+        document.write('</table>')
+    </script>
+    </table>
+
+</body>
+
+</html>

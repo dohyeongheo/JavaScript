@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let list = [23, 54, 78, 13, 44];
+
+        // Case1. for문 이용
+        // 1. 가장 큰 값을 넣을 maxNum
+        // 2. 비교할 대상을 잡아줌
+        // 3. for 반복문
+        // 4. "최대값 >> "
+
+        let maxNum = 0;
+
+        for (let i = 0; i < list.length; i++) {
+            if (list[i] > maxNum) {
+                maxNum = list[i]
+            }
+        }
+        console.log('최대값은 >> ' + maxNum)
+
+        // Case2. Math 이용 : Math max
+        // Math.max() 알아서 제일 큰 수 출력 
+        // Math.max(넣을값,배열)
+        let maxNum2 = Math.max.apply(null, list)
+        console.log('Math.max이용 최대값 출력>> ' + maxNum2)
+    </script>
+</body>
+
+</html>

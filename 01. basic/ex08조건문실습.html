@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let javaScore = Number(prompt("자바 점수를 입력해주세요", "(숫자로만 입력해주세요)"))
+        let andScore = Number(prompt("안드로이드 점수를 입력해주세요", "(숫자로만 입력해주세요)"))
+        let webScore = Number(prompt("웹 점수를 입력해주세요", "(숫자로만 입력해주세요)"))
+
+        let sum = javaScore + andScore + webScore;
+
+        // .toFixed (소수점 자리수 조절)
+        let avg = (sum / 3).toFixed(2);
+
+        let grade = '';
+
+        if (avg >= 90) {
+            grade = 'A';
+        } else if (avg >= 80) {
+            grade = 'B';
+        } else if (avg >= 70) {
+            grade = 'C';
+        } else if (avg >= 60) {
+            grade = 'D';
+        } else {
+            grade = 'F';
+        }
+        console.log('당신의 평균은 ' + avg + ' 이고, 당신의 등급은' + grade + '입니다!')
+    </script>
+</body>
+
+</html>

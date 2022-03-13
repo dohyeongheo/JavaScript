@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // (1) 함수 선언
+        // () : 어떤 값을 전달 받아 올건지 인자를 정의하는 부분
+        function helloWorld() {
+            // 실제로 함수 안에서 어떤 코드가 동작하는지
+            console.log('hello world!');
+        }
+
+        // (2) 함수 호출, 선언과 호출을 불리해서 생각할 것!
+        helloWorld();
+
+        // ** 매개변수를 통한 기능 출력함수 작성
+        function addNum(num1, num2) {
+            console.log('addNum의 결과는 >> ' + (num1 + num2));
+        }
+        addNum(5, 10);
+
+        // ** 매개변수를 통한 리턴 함수 작성
+        // 함수가 결과 값을 반환하는 경우에 반드시 return 문을 사용!
+        function minusNum(num1, num2) {
+            return num1 - num2;
+        }
+
+        let res = minusNum(10, 5);
+        console.log('minusNum의 결과는 >> ' + res)
+
+        // 자바스크립트 함수의 특징
+        // 1. 데이터 타입이 동일한지 검사하지 않는다.
+        // 2. 매개변수와 입력값이 개수가 같은지 확인하지 않음
+        // ex) >> minusNum(10,5,3) , 오류가 나지 않음, 마지막 매개변수만 무시
+        // 3. 만약 입력값의 개수가 매개변수보다 적다면 undefined로 설정
+        // ex) >> minusNum(10), 마지막 매개변수는 undefined가 됨
+        // 4. JS 함수 hoist 호출이 선언보다 먼저 실행되도, 오류가 나지 않음
+    </script>
+
+</body>
+
+</html>

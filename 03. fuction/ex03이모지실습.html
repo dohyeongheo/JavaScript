@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // (1) 사용자에게 기호 emoji를 입력받음
+        // (2) 몇 줄 출력할지 입력하시오
+        // (3) emoji 피라마디를 만들어주는 fuction pyramid 선언
+        // (4) 피라미드 호출
+
+        let emoji = prompt('원하는 이모지를 입력하세요');
+        let num = Number(prompt('몇줄 출력할지 입력하세요'));
+
+        function pyramid(emoji, num) {
+            for (let i = 0; i < num; i++) {
+                for (let j = 0; j <= i; j++) {
+                    document.write(emoji)
+                }
+                document.write('<br>');
+            }
+        }
+        pyramid(emoji, num);
+    </script>
+</body>
+
+</html>
